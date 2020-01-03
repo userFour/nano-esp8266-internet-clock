@@ -14,6 +14,25 @@
 // Port B for segC, segD, segE, segF, segG, and decimal point
 // Port C for colon, apostrophe, and SoftwareSerial
 //
+// Hardware and wiring:
+// Arduino Nano (), Sparkfun BOB-12009 Logic Level Converter (LLC_)
+// YSD-439AR6B-35 Seven Segment Display (YS_)
+// Adafruit Huzzah ESP8266 Breakout (ESP_)
+// 5V --> LLC_HV
+// 3V3 --> LLC_LV
+// GND --> LLC_GND
+// 5V --> ESP_VBat
+// GND --> ESP_GND
+// D2 ... D5 --> YS_1, YS_2, YS_6, YS_8 (Digits 1 .. 4)
+// D6, D7 --> 1k --> YS_14, YS_16 (SegA, SegB)
+// D8 ... D12 --> 1k --> YS_13, YS_3, YS_5, YS_11, YS_15 (SegC, SegD, SegE, SegF, SegG)
+// D13 --> 1k --> YS_7 (Decimal)
+// A0 --> YS_4 (Colon); YS_12 --> 1k --> GND
+// A1 --> YS_10 (Apostrophe); YS_9 --> 1k --> GND
+// A2 --> LLC_HV1; A3 --> LLC_HV2
+// ESP_14 --> LLC_LV1
+// ESP_RST --> LLC_LV2
+//
 //------------------------------------------------------------------------------
 
 #include <Time.h>
